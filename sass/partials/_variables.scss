@@ -1,0 +1,27 @@
+$bg__blend--soft: soft-light;
+$bg__classes:
+    "error",
+    "comingsoon",
+    "privacy";
+$bg__comingsoon-img: "../img/coming.jpg";
+$bg__error-img: "../img/error.jpg";
+$bg__privacy-img: "../img/privacy.jpg";
+$bg__aoa:
+    $bg__error-img,
+    $bg__comingsoon-img,
+    $bg__privacy-img;
+$body__min-height: 100%;
+$color__bg-1: #333;
+$color__shadow: #000;
+$color__container-bg: #fff;
+$font-logo__family: 'Frank Ruhl Libre';
+$font-logo__size: 24px;
+$font-main__family: 'Heebo';
+$font-main__size: 16px;
+$header__height: 78px;
+$section__min-height: 100vh;
+$text__shadow: 1px 1px 4px $color__shadow;
+$theme-colors: (
+  "primary": #242a35,
+  "secondary": #ffd544
+);
