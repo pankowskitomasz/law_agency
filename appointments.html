@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <title>Law Firm | Appointments</title>
+</head>
+<body class="bg-secondary">
+    <header class="container-fluid px-0 border-bottom border-dark text-shadow">
+        <nav class="navbar navbar-expand-md nabvar-dark bg-secondary">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/navbar_logo.png" alt="logo"/>
+                <span class="navbar-text font-logo font-italic text-white">
+                    Law <span class="text-primary">Firm</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="case-studies.html" class="nav-link">Case studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="appointments.html" class="nav-link">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="user.html" class="nav-link">
+                            <span class="fa fa-user-o"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="appointments-s1 container-fluid d-flex align-items-center justify-content-center py-5">
+            <div class="row w-100">
+                <div class="col-10 col-sm-8 col-md-6 card mx-auto p-0 text-gray shadow shadow-lg">
+                    <div class="card-header">
+                        <span class="fa fa-calendar-plus-o"></span>
+                        New Appointment
+                    </div>
+                    <div class="card-body">
+                        <form class="px-3" autocomplete="off">
+                            <label>Full Name</label>
+                            <input type="text" 
+                                class="form-control line-box rounded-0 mb-3" 
+                                maxlength="80"
+                                name="fname"
+                                placeholder="Full name">
+                            <label>Phone</label>
+                            <input type="tel" 
+                                class="form-control line-box rounded-0 mb-3" 
+                                maxlength="14"
+                                name="fphone"
+                                placeholder="Phone number">
+                            <label>Email</label>
+                            <input type="email" 
+                                class="form-control line-box rounded-0 mb-3" 
+                                maxlength="100"
+                                name="femail"
+                                placeholder="Email">
+                            <label>Date</label>
+                            <input type="datetime-local"
+                            class="form-control mb-3" 
+                                name="fdate">
+                            <textarea class="form-control"
+                                maxlength="250"></textarea>
+                            <div class="w-100 text-right mt-3">
+                                <input type="reset" class="btn btn-outline-gray" value="Clear">
+                                <input type="submit" class="btn btn-outline-gray" value="Create">
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-dark">
+        <small class="my-0">
+            Copyright &copy; 2020 Tomasz Pankowski. All rights reserved.
+            <a class="text-white" href="privacy.html">Privacy policy</a>
+        </small>
+    </footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

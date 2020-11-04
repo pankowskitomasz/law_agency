@@ -1,4 +1,5 @@
 @include aoa-bg-series($bg__classes,$bg__aoa);
+@include aoa-bg-series($bg__centerized--classes,$bg__aoa--centerized,0,"bottom center","contain","scroll");
 
 *{
     font-family: $font-main__family;
@@ -9,21 +10,53 @@
     @include calc-param(min-height, $section__min-height, $header__height);
 }
 
+%bg-cover{
+    background-size: cover;
+}
+
+.border{
+    &-bold{
+        &-bottom{
+            border-bottom-width: $border__bold--size !important;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-style: $border__bold--style;
+            border-top-width: 0;
+        }
+        &-left{
+            border-bottom-width: 0;
+            border-left-width: $border__bold--size !important;
+            border-right-width: 0;
+            border-style: $border__bold--style;
+            border-top-width: 0;
+        }
+        &-right{
+            border-bottom-width: 0;
+            border-left-width: 0;
+            border-right-width: $border__bold--size !important;
+            border-style: $border__bold--style;
+            border-top-width: 0;
+        }
+        &-top{
+            border-bottom-width: 0;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-top-width: $border__bold--size !important;
+            border-style: $border__bold--style;
+        }
+    }
+}
 .comingsoon{
     &-s1{
-        @extend %bg-blend;
+        @include calc-param(min-height, $section__min-height, $header__height);
+    }
+}
+.contact{
+    &-s1{
+        background-attachment: scroll;
     }
 }
 .error{
-    &-s1{
-        @extend %bg-blend;
-    }
-}
-.privacy{
-    &-container{
-        background-color: $color__container-bg !important;
-        opacity: 0.8;
-    }
     &-s1{
         @extend %bg-blend;
     }
@@ -36,6 +69,58 @@
         @include set-font-params($font-main__family,$font-main__size);
     }
 }
+.hover{
+    &-primary{
+        .dropdown-item{
+            &:hover{
+                background-color: $color__primary !important;
+                color: $color__white;
+                cursor: pointer;
+                text-shadow: $text__shadow;
+            }
+        }
+    }
+}
+.icon{
+    font-size: $icon__size !important;
+}
+.index{
+    &-s1{
+        @include calc-param(min-height, $section__min-height, $header__height);
+    }
+    &-s4 {
+        @extend %bg-cover;
+    }
+    &-sub{
+        &-s1{
+            @extend %bg-cover;
+        }
+    }
+}
+.line{
+    &-box{
+        border:none !important;
+        border-bottom: $border__bottom--border !important;
+        box-shadow: none!important;
+    }
+}
+.link{
+    &-primary{
+        &:hover{
+            color: $link__color--hover !important;
+            background-color: $link__color-bg--hover !important;
+            text-shadow: $text__shadow;
+        }
+    }
+}
+.minh{
+    &-50vh{
+        min-height: 50vh;
+    }
+    &-100vh{
+        min-height: 100vh;
+    }
+}
 .navbar{
     &-toggler{
         &-icon{
@@ -43,8 +128,42 @@
         }
     }
 }
+.privacy{
+    &-container{
+        background-color: $color__container-bg !important;
+        opacity: 0.8;
+    }
+    &-s1{
+        @extend %bg-blend;
+    }
+}
+.services{
+    &-s1{
+        @extend %bg-blend;
+    }
+    &-s2{
+        @extend %bg-blend;
+        background-attachment: scroll;
+    }
+}
 .text{
     &-shadow{
+        &-none{
+            text-shadow: none;
+        }
         text-shadow: $text__shadow;
     }
+}
+
+textarea{
+    resize: none !important;
+}
+
+@media all and (max-width: 767px){
+    .index{
+        &-s1{
+            background-blend-mode: $bg__blend--soft;
+        }
+    }
+
 }
