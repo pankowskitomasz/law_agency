@@ -2,26 +2,65 @@ $bg__blend--soft: soft-light;
 $bg__classes:
     "error",
     "comingsoon",
-    "privacy";
+    "privacy",
+    "services",
+    "appointments",
+    "user",
+    "contact";
+$bg__centerized--classes:
+    "index",
+    "index-sub";
+$bg__services-img: 
+    "../img/desk.jpg",
+    "../img/lines.png";
+$bg__appointments-img:
+    "../img/lines.png";
 $bg__comingsoon-img: "../img/coming.jpg";
+$bg__contact-img:
+    "../img/building.jpg";
 $bg__error-img: "../img/error.jpg";
+$bg__index-img: 
+    "../img/man.png",
+    "",
+    "",
+    "../img/court.jpg";
+$bg__index-sub-img: "../img/office.jpg";
 $bg__privacy-img: "../img/privacy.jpg";
+$bg__user-img:
+    "../img/lines.png";
 $bg__aoa:
     $bg__error-img,
     $bg__comingsoon-img,
-    $bg__privacy-img;
+    $bg__privacy-img,
+    $bg__services-img,
+    $bg__appointments-img,
+    $bg__user-img,
+    $bg__contact-img;
+$bg__aoa--centerized:
+    $bg__index-img,
+    $bg__index-sub-img;
 $body__min-height: 100%;
+$border__bold--size: 6px;
+$border__bold--style: solid;
+$border__bottom--border: 1px solid #888;
 $color__bg-1: #333;
 $color__shadow: #000;
 $color__container-bg: #fff;
+$color__primary: #ffd544;
+$color__white: #fff;
 $font-logo__family: 'Frank Ruhl Libre';
 $font-logo__size: 24px;
 $font-main__family: 'Heebo';
 $font-main__size: 16px;
 $header__height: 78px;
+$icon__size: 50px;
+$link__color--hover: $color__white;
+$link__color-bg--hover: $color__primary;
 $section__min-height: 100vh;
 $text__shadow: 1px 1px 4px $color__shadow;
 $theme-colors: (
-  "primary": #242a35,
-  "secondary": #ffd544
+  "primary": $color__primary, 
+  "secondary": #242a35,
+  "gray":#555,
+  "light-gray": #999
 );
