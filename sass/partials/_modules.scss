@@ -14,6 +14,13 @@
     background-size: cover;
 }
 
+.appointments{
+    &-s1{
+        background-attachment: scroll;
+        min-height: $min-height-s1 !important;
+    }
+}
+
 .border{
     &-bold{
         &-bottom{
@@ -54,6 +61,11 @@
 .contact{
     &-s1{
         background-attachment: scroll;
+        min-height: $min-height-s1 !important;
+    }
+    &-s3{
+        background-attachment: scroll;
+        background-position: center;
     }
 }
 .error{
@@ -114,8 +126,17 @@
     }
 }
 .minh{
+    &-20vh{
+        min-height: 20vh;
+    }
+    &-30vh{
+        min-height: 30vh;
+    }
     &-50vh{
         min-height: 50vh;
+    }
+    &-70vh{
+        min-height: 70vh;
     }
     &-100vh{
         min-height: 100vh;
@@ -155,8 +176,23 @@
     }
 }
 
+.user{
+    &-s1{
+        min-height: $min-height-s1 !important;
+    }
+}
+
 textarea{
     resize: none !important;
+}
+
+
+@media all and (max-width: 575px){
+    .border{
+        &-hide-xs{
+            border-color: transparent !important;
+        }
+    }
 }
 
 @media all and (max-width: 767px){
