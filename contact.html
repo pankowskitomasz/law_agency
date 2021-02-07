@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
     <title>Law Firm | Contact</title>
 </head>
 <body class="bg-secondary">
@@ -38,7 +37,7 @@
                         <a href="contact.html" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="user.html" class="nav-link">
+                        <a href="user.php" class="nav-link">
                             <span class="fa fa-user-o"></span>
                         </a>
                     </li>
@@ -47,9 +46,9 @@
         </nav>
     </header>
     <main>
-        <section class="contact-s1 align-items-center d-flex container-fluid text-shadow bg-secondary minh-50vh">
+        <section class="contact-s1 align-items-center d-flex container-fluid text-shadow bg-secondary minh-30vh border-bottom border-primary">
         </section>
-        <section class="contact-s2 align-items-center d-flex container text-shadow bg-secondary minh-50vh py-5">
+        <section class="contact-s2 align-items-center d-flex container text-shadow bg-secondary minh-20vh py-5">
             <div class="row w-100 mx-0">
                 <div class="col-12 col-sm-4">
                     <ul class="list-unstyled text-white text-center text-sm-left">
@@ -114,14 +113,94 @@
                 </div>
             </div>
         </section>
+        <section class="contact-s3 container-fluid d-flex align-items-center justify-content-center py-5 minh-50vh bg-white">
+            <div class="row w-100">
+                <div class="col-10 col-sm-8 col-md-6 col-lg-5 card border-dark mx-auto p-0 text-gray shadow shadow-lg">
+                    <div class="card-header bg-dark text-primary">
+                        <span class="fa fa-calendar-plus-o"></span>
+                        New Appointment
+                    </div>
+                    <div class="card-body">
+                        <form class="px-3" 
+                            autocomplete="off"
+                            action="error.php"
+                            method="POST">
+                            <label>Full Name</label>
+                            <input type="text" 
+                                class="form-control line-box rounded-0 mb-3" 
+                                maxlength="30"
+                                name="fname"
+                                placeholder="Full name">
+                            <label>Phone</label>
+                            <input type="tel" 
+                                class="form-control line-box rounded-0 mb-3" 
+                                maxlength="15"
+                                name="fphone"
+                                placeholder="Phone number">
+                            <label>Email</label>
+                            <input type="email" 
+                                class="form-control line-box rounded-0 mb-3" 
+                                maxlength="100"
+                                name="fmail"
+                                placeholder="Email">
+                            <textarea class="form-control"
+                                name="fmsg"
+                                maxlength="250"></textarea>
+                            <div class="w-100 text-right mt-3">
+                                <input type="reset" class="btn btn-outline-gray" value="Clear">
+                                <input type="submit" class="btn btn-outline-gray" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-dark">
+    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-primary">
         <small class="my-0">
-            Copyright &copy; 2020 Tomasz Pankowski. All rights reserved.
+            Copyright &copy; 2020-2021 Tomasz Pankowski. All rights reserved.
             <a class="text-white" href="privacy.html">Privacy policy</a>
         </small>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="privacyModal">
+        <div class="modal-dialog font-header">
+            <div class="modal-content border-green p-2">
+                <div class="modal-header text-center">
+                    <h4 class="font-header text-green font-weight-bold">GPDR Declaration</h4>
+                    <a href="#privacyModal" 
+                        data-target="#privacyModal"
+                        data-dismiss="modal"
+                        class="close text-green">
+                        &times;
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <p class="initialism">
+                        This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                        in long term meaning (longer than needed for website operation during visitor's
+                        presence), any user (visitor) data.
+                    </p>
+                    <p class="initialism pt-2">
+                        All information collected during visitor's 
+                        presence on this website is used only for technical purposes, required for 
+                        correct operation of website or demonstration purposes related to technical 
+                        mechanisms and presentation of its operation... 
+                        <a href="privacy.html" class="text-green font-weight-bold">More about privacy</a>
+                    </p>                        
+                    <p class="initialism pt-2">
+                        If you accept privacy policy please click button "accept". If you 
+                        refuse it, leave page by closing it in your web browser, please.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark mx-auto"
+                        onclick="acceptPrivacyPolicy()">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="js/main.min.js"></script>
 </body>
 </html>

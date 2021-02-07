@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
     <title>Law Firm | Page not found</title>
 </head>
 <body class="text-shadow">
@@ -44,13 +44,51 @@
             </div>
         </section>
     </main>
-    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-dark">
+    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-primary">
         <small class="my-0">
-            Copyright &copy; 2020 Tomasz Pankowski. All rights reserved.
+            Copyright &copy; 2020-2021 Tomasz Pankowski. All rights reserved.
             <a class="text-white" href="privacy.html">Privacy policy</a>
         </small>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="privacyModal">
+        <div class="modal-dialog font-header">
+            <div class="modal-content border-green p-2">
+                <div class="modal-header text-center">
+                    <h4 class="font-header text-green font-weight-bold">GPDR Declaration</h4>
+                    <a href="#privacyModal" 
+                        data-target="#privacyModal"
+                        data-dismiss="modal"
+                        class="close text-green">
+                        &times;
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <p class="initialism">
+                        This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                        in long term meaning (longer than needed for website operation during visitor's
+                        presence), any user (visitor) data.
+                    </p>
+                    <p class="initialism pt-2">
+                        All information collected during visitor's 
+                        presence on this website is used only for technical purposes, required for 
+                        correct operation of website or demonstration purposes related to technical 
+                        mechanisms and presentation of its operation... 
+                        <a href="privacy.html" class="text-green font-weight-bold">More about privacy</a>
+                    </p>                        
+                    <p class="initialism pt-2">
+                        If you accept privacy policy please click button "accept". If you 
+                        refuse it, leave page by closing it in your web browser, please.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark mx-auto"
+                        onclick="acceptPrivacyPolicy()">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>     
+    <script src="js/main.min.js"></script>
 </body>
 </html>

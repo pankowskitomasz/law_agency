@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.min.css">
     <title>Law Firm | High quality legal services</title>
 </head>
 <body class="bg-secondary">
@@ -38,7 +37,7 @@
                         <a href="contact.html" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="user.html" class="nav-link">
+                        <a href="user.php" class="nav-link">
                             <span class="fa fa-user-o"></span>
                         </a>
                     </li>
@@ -47,7 +46,7 @@
         </nav>
     </header>
     <main>
-        <section class="index-s1 align-items-center d-flex container text-shadow bg-secondary">
+        <section class="index-s1 align-items-center d-flex container text-shadow bg-secondary minh-50vh">
             <div class="row w-100 mx-0">
                 <div class="col-12 col-md-4 py-5">
                     <div class="text-white text-center text-md-left">
@@ -101,7 +100,7 @@
                 </div>
             </div>
         </section>
-        <section class="index-s2 container minh-50vh">
+        <section class="index-s2 container minh-20vh">
             <div class="row w-100 mx-0 px-4 px-sm-0">
                 <div class="col-6 col-sm-4 col-md-3 card rounded-0 p-0">
                     <div class="card-body text-gray text-center link-primary">
@@ -201,10 +200,10 @@
                 </div>
             </div>
         </section>
-        <section class="index-s3 container d-flex minh-50vh">
+        <section class="index-s3 container d-flex minh-30vh">
             <div class="row w-100 mx-0 align-self-center">
                 <div class="col-12 col-md-6 p-4 align-self-center">
-                    <div class="text-white text-center text-sm-left">
+                    <div class="text-white text-center text-sm-left py-5">
                         <h2>How Can We Help?</h2>
                         <p class="lead">
                             Experienced Attorneys Professional Approach.
@@ -240,12 +239,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-none d-md-block index-sub-s1 minh-100vh"></div>
+                <div class="col-12 col-md-6 d-none d-md-block index-sub-s1 minh-30vh"></div>
             </div>
         </section>
-        <section class="index-s4 container-fluid minh-50vh d-flex align-items-center">
-            <div class="row justify-content-center mx-0 w-100">
-                <div class="col-8 col-sm-6 border border-primary text-white text-center bg-secondary p-4 rounded privacy-container">
+        <section class="index-s4 container-fluid minh-30vh d-flex align-items-center">
+            <div class="row justify-content-center mx-0 w-100 py-5">
+                <div class="col-8 col-sm-6 col-lg-4 border border-primary text-dark text-center bg-secondary p-4 rounded privacy-container">
                     <p class="initialism">
                         Talk to us! We promise we can help you! 
                         You Can Trust Us To Get You The justice 
@@ -258,13 +257,51 @@
             </div>
         </section>
     </main>
-    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-dark">
+    <footer class="container-fluid bg-secondary text-center text-white p-3 border-top border-primary">
         <small class="my-0">
-            Copyright &copy; 2020 Tomasz Pankowski. All rights reserved.
+            Copyright &copy; 2020-2021 Tomasz Pankowski. All rights reserved.
             <a class="text-white" href="privacy.html">Privacy policy</a>
         </small>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="privacyModal">
+        <div class="modal-dialog font-header">
+            <div class="modal-content border-green p-2">
+                <div class="modal-header text-center">
+                    <h4 class="font-header text-green font-weight-bold">GPDR Declaration</h4>
+                    <a href="#privacyModal" 
+                        data-target="#privacyModal"
+                        data-dismiss="modal"
+                        class="close text-green">
+                        &times;
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <p class="initialism">
+                        This website is a <span class="text-danger"> demo version </span> of real website,  It doesn't collect and process,
+                        in long term meaning (longer than needed for website operation during visitor's
+                        presence), any user (visitor) data.
+                    </p>
+                    <p class="initialism pt-2">
+                        All information collected during visitor's 
+                        presence on this website is used only for technical purposes, required for 
+                        correct operation of website or demonstration purposes related to technical 
+                        mechanisms and presentation of its operation... 
+                        <a href="privacy.html" class="text-green font-weight-bold">More about privacy</a>
+                    </p>                        
+                    <p class="initialism pt-2">
+                        If you accept privacy policy please click button "accept". If you 
+                        refuse it, leave page by closing it in your web browser, please.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-dark mx-auto"
+                        onclick="acceptPrivacyPolicy()">
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="js/main.min.js"></script>
 </body>
 </html>
